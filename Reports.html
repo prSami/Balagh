@@ -4,34 +4,66 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
 
   <title>البلاغات المستلمة | الموظف </title>
 </head>
 <body>
-<header>
-<label> مرحبا : اسم المستخدم</label>
-<label> تسجيل الخروج</label>
-</header>
+  <div class="menu-bar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand"><img src="assets/logo.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link  "  >مرحبا ... ،</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="AllEmployee.html">الموظفين</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="Reports.html">التقارير</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="index.html">تسجيل الخروج</a>
+              </li>
+              </li>
 
-<div>
-  <a href="AddEmployee.html" > الموظفين</a>
-  <a href="Reports.html" > التقارير</a>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-</div>
+    </div>
+  </div>
 
-  <div class="container"> <!-- class all form -->
+  <div class="container py-5">
+    <div class="row">
 
-    <table>
+
+  <table id="example" class="table table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>اسم الموظف</th>
+            <th>عدد البلاغات المستلمة</th>
+            <th>عدد البلاغات المنجزة</th>
+            <th> عدد البلاغات المحالة</th>
+            <th>عدد البلاغات التي لم تنجز</th>
+
+        </tr>
+    </thead>
+    <tbody>
       <tr>
-        <th>اسم الموظف</th>
-        <th>عدد البلاغات المستلمة </th>
-        <th>عدد البلاغات المنجزة</th>
-        <th>عدد البلاغات المحالة</th>
-        <th>عدد البلاغات التي لم تنجز</th>
-      </tr>
-      <tr>
-        <td>ِ<a href=''>ahmad</a></td> <!-- عند الضغط على اسمه يستطيع مشاهدة جميع أعمال الموظف المستلمة-->
+        <td>ِ<a href='recRep.html'>سعد</a></td> <!-- عند الضغط على اسمه يستطيع مشاهدة جميع أعمال الموظف المستلمة-->
         <td>14</td>
         <td>1</td>
         <td>5</td>
@@ -39,9 +71,29 @@
 
       </tr>
 
-    </table>
 
-</form>
+    </tbody>
+
+</table>
+    </div>
+  </div>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Footer -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center pt-2">
+      <p>&copy; 2023 copyright <a href="" class="text-white"></p>
+  </div>
+  </div>
 
 </body>
 </html>
+
