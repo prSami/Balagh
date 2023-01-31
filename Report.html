@@ -33,7 +33,7 @@
                   البلاغات
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="">البلاغات الحالية</a></li>
+                  <li><a class="dropdown-item" href="CurrentReport.html">البلاغات الحالية</a></li>
                   <li><a class="dropdown-item" href="preRep.html">البلاغات السابقة</a></li>
 
                 </ul>
@@ -46,7 +46,6 @@
     </div>
   </div>
 
-<header>
 
   <div class="body-form">
     <div class="form1">
@@ -56,76 +55,66 @@
       <form class="" action="#" method="post">
           <div class="form-group">
               <label class="form-label" for="Author">جهة البلاغ </label>
-              <select class="form-select" name="Author" id="kind">
+              <select class="form-select" name="Author" id="Author" required>
                 <option value="">المرور</option>
                 <option value="">البلدية</option>
                 <option value="">وزارة التجارة</option>
               </select>
           </div>
-          <div class="form-group   ">
-              <label class="form-label" for="password">كلمة المرور</label>
-              <input class="form-control" type="password" id="password" required>
-
+          <div class="form-group">
+              <label class="form-label" for="typeReport">نوع البلاغ </label>
+              <select class="form-select" name="typeReport" id="typeReport" required >
+                <option value="">غش تجاري</option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label class="form-label" for="city">المدينة</label>
+              <select class="form-select" name="city" id="city"required>
+                <option value="">الرياض</option>
+                <option value="">جدة</option>
+                <option value="">مكة المكرمة</option>
+              </select>
           </div>
 
+          <div class="form-group ">
+              <label class="form-label" for="Description">الوصف</label>
+              <textarea class="form-control" id="Description" required></textarea>
+          </div>
+          <div class="form-group ">
+              <label class="form-label" for="Attachments">المرفق</label>
+              <input type="file"id="image" name="image" accept="image/png, image/jpeg" required>
+          </div>
 
-          <input class="btn btn-success w-100" type="submit" value="تسجيل الدخول">
           <div>
-            <h5> </h5>
-            <a href=""> تسجيل الدخول عبر نفاذ</a>
-          </div>
-          <div>
-            <a href="signup.html"> ارسال </a>
-          </div>
+            <label> الموقع</label>
+            <button> . </button> <!-- chose the location -->
+            </div>
+
+
+                    <!-- Google map
+          <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 200px">
+            <iframe src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+              style="border:0" allowfullscreen></iframe>
+          </div> -->
+
+
+
+          <button class="btn btn-success w-100" type="submit" value="ارسال">ارسال</button>
+
       </form>
 
     </div>
     </div>
 
-<form class="" action="">
-  <div class="container"> <!-- class all form -->
-
-  <div>
-    <label> جهة البلاغ </label>
-    <select name="" id="kind">
-      <option value="">المرور</option>
-      <option value="">البلدية</option>
-      <option value="">وزارة التجارة</option>
-    </select>
+    <!-- Footer -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center pt-2">
+      <p>&copy; 2023 copyright <a href="" class="text-white"></p>
   </div>
-  <div>
-    <label> نوع البلاغ </label>
-    <select name="" id="kind">
-      <option value="">غش تجاري</option>
-      <option value=""></option>
-      <option value=""></option>
-    </select>
   </div>
-  <div>
-    <label> المدينة</label>
-    <select name="" id="kind">
-      <option value=""> الرياض</option>
-      <option value=""> جدة</option>
-      <option value=""> مكة المكرمة</option>
-    </select>
-  </div>
-    <div>
-    <label> الوصف</label>
-    <textarea id="" placeholder=""/></textarea>
-  </div>
-    <div>
-    <label> المرفقات</label>
-    <input type="file"id="avatar" name="avatar" accept="image/png, image/jpeg">
-    </div>
-    <div>
-    <label> الموقع</label>
-    <button> . </button> <!-- chose the location -->
-    </div>
-  <div>
-    <button type="submit" id=""  > رفع البلاغ</button>
-  </div>
-
-</form>
 
 </body>
 </html>

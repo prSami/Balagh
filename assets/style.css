@@ -14,9 +14,11 @@
   width: 150px;
 
 }
-.nav-link{
+.nav-link {
   color: white;
 }
+
+
 .body-form {
   height: 100vh;
   display: flex;
