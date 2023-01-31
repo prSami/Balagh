@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+.menu-bar {
+
+  min-height: 8%;
+  background-color: rgb(15, 104, 75);
+}
+
+.menu-bar img {
+  width: 150px;
+
+}
+.nav-link{
+  color: white;
+}
+.body-form {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:  rgba(15, 104, 74, 0.543);
+}
+
+.form1 {
+  width: 660px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #ffffff9a;
+}
+
+.form1 h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.form1 form {
+  font-size: 20px;
+}
+
+.form1 form .form-group {
+  margin-bottom: 5px;
+}
+
+.form1 form input[type="submit"] {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
