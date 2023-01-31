@@ -4,62 +4,114 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> تفاصيل البلاغ | مشرف</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+
+  <title> تفاصيل البلاغ | الموظف</title>
 </head>
 <body>
-<header>
-<label> مرحبا : اسم المستخدم</label>
-<label> تسجيل الخروج</label>
-</header>
-
-<div>
-  <a href="ReportsNow.html" > البلاغات الحالية</a>
-  <a href="recRep.html" > البلاغات المستلمة</a>
 
 
-</div>
+  <div class="menu-bar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand"><img src="assets/logo.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link  "  >مرحبا ... ،</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  البلاغات
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item w" href="ReportsNow.html">جميع البلاغات</a></li>
+                  <li><a class="dropdown-item active"   href="RecRep.html">البلاغات المستلمة</a></li>
 
-<label> تفاصيل البلاغ</label>
-<br>
-<br>
-<form class="" action="">
-  <div class="container"> <!-- class all form -->
+                </ul>
+              </li>
 
-  <div>
-    <label> جهة البلاغ </label>
-    <input type="text">
-  </div>
-  <div>
-    <label> نوع البلاغ </label>
-    <input type="text">
-
-  </div>
-  <div>
-    <label> المدينة</label>
-    <input type="text">
-
-  </div>
-    <div>
-    <label> الوصف</label>
-    <textarea id="" placeholder=""/></textarea>
-  </div>
-    <div>
-    <label> المرفقات</label>
-    <input type="file"id="avatar" name="avatar" accept="image/png, image/jpeg"> <!-- see attachment -->
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-    <div>
-    <label> الموقع</label>
-    <!-- see the location -->
-    </div>
-    <div>
-      <label> تفاصيل العمل</label>
-      <input type="text">
-    </div>
-  <div>
-    <button type="submit" id=""  > حفظ</button>
   </div>
 
-</form>
+
+
+
+  <div class="body-form">
+    <div class="form1">
+          <h1 class="text-center">تفاصيل البلاغ</h1>
+
+          <form class="" action="#" method="get">
+              <div class="form-group">
+                  <label class="form-label" for="Author">جهة البلاغ </label>
+                  <input type="text" class="form-control" >
+              </div>
+              <div class="form-group">
+                  <label class="form-label" for="typeReport">نوع البلاغ </label>
+                  <input type="text" class="form-control" >
+              </div>
+              <div class="form-group">
+                  <label class="form-label" for="city">المدينة</label>
+                  <input type="text" class="form-control" >
+
+              </div>
+
+              <div class="form-group ">
+                  <label class="form-label" for="Description">الوصف</label>
+                  <textarea class="form-control" id="Description" required></textarea>
+              </div>
+              <div class="form-group ">
+                  <label class="form-label" for="Attachments">المرفق</label>
+                  <input type="file"id="image" name="image" accept="image/png, image/jpeg" required>
+              </div>
+
+              <div>
+                <label> الموقع</label>
+                <button> . </button> <!-- chose the location -->
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="Author"> تعليق الموظف </label>
+                  <input type="text" class="form-control" >
+              </div>
+
+                        <!-- Google map
+              <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 200px">
+                <iframe src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                  style="border:0" allowfullscreen></iframe>
+              </div> -->
+
+
+
+              <button class="btn btn-success w-100" type="submit" value="">حفظ</button>
+
+          </form>
+
+        </div>
+        </div>
+
+
+<!-- Footer -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center pt-2">
+      <p>&copy; 2023 copyright <a href="" class="text-white"></p>
+  </div>
+  </div>
 
 </body>
 </html>
+

@@ -4,50 +4,103 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
 
   <title>البلاغات المستلمة | الموظف </title>
 </head>
 <body>
-<header>
-<label> مرحبا : اسم المستخدم</label>
-<label> تسجيل الخروج</label>
-</header>
-
-  <div>
-    <a href="ReportsNow.html" > البلاغات الحالية</a>
-    <a href="recRep.html" > البلاغات المستلمة</a>
 
 
+  <div class="menu-bar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand"><img src="assets/logo.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link  "  >مرحبا ... ،</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  البلاغات
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item w" href="ReportsNow.html">جميع البلاغات</a></li>
+                  <li><a class="dropdown-item active"   href="RecRep.html">البلاغات المستلمة</a></li>
+
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
   </div>
 
-  <div class="container"> <!-- class all form -->
 
-    <table>
-      <tr>
-        <th>رقم البلاغ</th>
-        <th>النوع </th>
-        <th>التاريخ</th>
-        <th>الحالة</th>
-        <th>التفاصيل</th>
-      </tr>
-      <tr>
-        <td>10917111</td>
-        <td>غش تجاري </td>
-        <td>1/1/2023</td>
-        <td><div>
-          <select name="" id="kind">
-            <option value="">منتهية</option>
-            <option value="">قيد المعالجة</option>
-            <option value="">جديدة</option>
-          </select>
-        </div></td>
-        <td><a href=""> اضغط هنا </a></td>
-      </tr>
+  <div class="container py-5">
+    <div class="row">
 
-    </table>
 
-</form>
+  <table id="example" class="table table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>رقم البلاغ</th>
+            <th>التاريخ</th>
+            <th>نوع البلاغ</th>
+            <th> التفاصيل</th>
+            <th>الحالة</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>1/1/2023</td>
+            <td>غش تجاري</td>
+                          <!-- لما يضغط على استلام يكون البلاغ تحت تصرف الموظف-->
+            <td> <button onclick="detailsReport.html" type="submit" class="btn btn-success">مشاهدة الحالة</button></td>
+            <td><select class="form-select" name="Author" id="Author" required>
+              <option value="">قيد المعالجة</option>
+              <option value="">منتهية</option>
+              <option value="">لم يتم العمل عليها</option>
+            </select></td>
+        </tr>
+
+
+    </tbody>
+
+</table>
+    </div>
+  </div>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Footer -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center pt-2">
+      <p>&copy; 2023 copyright <a href="" class="text-white"></p>
+  </div>
+  </div>
 
 </body>
 </html>
+
+
