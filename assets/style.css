@@ -64,3 +64,17 @@ td{
 
 }
 
+.google-maps {
+  position: relative;
+  overflow: hidden;
+  width: 120px !important;
+  height: 120px !important;
+}
+.google-maps iframe  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
