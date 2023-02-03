@@ -1,0 +1,48 @@
+doctype html
+html(dir='rtl', lang='ar')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD', crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', integrity='sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN', crossorigin='anonymous')
+    link(rel='stylesheet', href='assets/style.css')
+    title &#x645;&#x646;&#x635;&#x629; &#x627;&#x644;&#x628;&#x644;&#x627;&#x63A;&#x627;&#x62A;
+  body
+    .menu-bar
+      .container
+        nav.navbar.navbar-expand-lg
+          .container-fluid
+            // Logo
+            a.navbar-brand
+              img(src='images/logo.png')
+            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+    .body-form
+      .form1
+        h1.text-center تسجيل الدخول
+        form.needs-validation(action='/login', method='POST')
+          .form-group
+            label.form-label(for='IDNumber') 
+            input#IDNumber.form-control(type='number', maxlength="10",required='true', name="user_id" , placeholder="رقم الهوية")
+          .form-group
+            label.form-label(for='password') 
+            input#password.form-control(type='password', required='true', name="user_pass", placeholder="كلمة المرور")
+          input.btn.btn-success.w-100(type='submit', value='تسجيل الدخول')
+        if msglogin
+          p.alert.alert-danger #{msglogin}
+          div
+            h5  
+             a.btn.w-100(href='/signup') تسجيل جديد
+          div
+            a(href='signup.html')   
+    // Footer
+    .container-fluid
+      .row
+        .col-md-12.text-center.pt-2
+          p
+            | &copy; 2023 copyright 
+            a.text-white(href='')
+          a.text-white(href='')
+        a.text-white(href='')
+      a.text-white(href='')

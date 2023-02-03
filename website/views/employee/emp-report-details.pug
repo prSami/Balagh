@@ -1,0 +1,94 @@
+doctype html
+html(dir='rtl', lang='ar')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD', crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', integrity='sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN', crossorigin='anonymous')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css')
+    title  &#x62A;&#x641;&#x627;&#x635;&#x64A;&#x644; &#x627;&#x644;&#x628;&#x644;&#x627;&#x63A; | &#x627;&#x644;&#x645;&#x648;&#x638;&#x641;
+  body
+    .menu-bar
+      .container
+        nav.navbar.navbar-expand-lg
+          .container-fluid
+            // Logo
+            a.navbar-brand
+              img(src='/images/logo.png')
+            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse
+              ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.nav-item
+                  a.nav-link &#x645;&#x631;&#x62D;&#x628;&#x627; ... &#x60C;
+                li.nav-item.dropdown
+                  a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                    | &#x627;&#x644;&#x628;&#x644;&#x627;&#x63A;&#x627;&#x62A;
+                  ul.dropdown-menu
+                    li
+                      a.dropdown-item.w(href='ReportsNow.html') &#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x628;&#x644;&#x627;&#x63A;&#x627;&#x62A;
+                    li
+                      a.dropdown-item.active(href='RecRep.html') &#x627;&#x644;&#x628;&#x644;&#x627;&#x63A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x644;&#x645;&#x629;
+                li.nav-item
+                  a.nav-link(href='index.html') &#x62A;&#x633;&#x62C;&#x64A;&#x644; &#x627;&#x644;&#x62E;&#x631;&#x648;&#x62C;
+    .body-form
+      .form1
+        h1.text-center &#x631;&#x641;&#x639; &#x628;&#x644;&#x627;&#x63A;
+        form(action='/user/incident-update', method='post' enctype='multipart/form-data')
+          .form-group
+            label.form-label(for='concernedparty') &#x62C;&#x647;&#x629; &#x627;&#x644;&#x628;&#x644;&#x627;&#x63A; 
+            input(type="text" hidden value=item.id name="id")
+            select#Author.form-select(name='concernedparty', required='true')
+              option(value='المرور' selected=(item.concernedparty == 'المرور')) المرور
+              option(value='الشرطة' selected=(item.concernedparty == 'الشرطة')) الشرطة
+              option(value='البلدية' selected=(item.concernedparty == 'البلدية')) البلدية
+              option(value='التجارة' selected=(item.concernedparty == 'التجارة')) التجارة
+          .form-group
+            label.form-label(for='city') المدينة
+            
+            select#city.form-select(name='city', required='')
+              option(value='الرياض' selected=(item.city == 'الرياض')) الرياض
+              option(value='جدة' selected=(item.city == 'جدة')) جدة
+              option(value='مكة' selected=(item.city == 'مكة')) مكة
+              option(value='بريدة' selected=(item.city == 'بريدة')) بريدة
+          .form-group
+            label.form-label(for='Description') وصف البلاغ
+            textarea#Description.form-control(required='', name="descreption",) #{item.descreption}
+            .form-group
+            label.form-label(for='comments') تعليقات الموظف
+            textarea#Description.form-control(required='', name="comments") #{item.comments}
+            .form-group
+            label.form-label(for='status') حالة البلاغ
+            select#status.form-select(name='status', required='true')
+              option(value='New' selected=(item.status == 'New'), disabled="true") جديد
+              option(value='مغلق' selected=(item.status == 'مغلق')) مغلق
+              option(value='تحت المعالجة' selected=(item.status == 'تحت المعالجة')) تحت المعالجة
+              
+          .form-group
+            label.form-label(for='image') المرفقات
+            input#image(type='file', name='image', accept='image/png, image/jpeg', required='false')
+            img(src="../uploads/"+item.attachment_url, alt="")
+          div
+            label  &#x627;&#x644;&#x645;&#x648;&#x642;&#x639;
+            button  . 
+            // chose the location
+          //
+            Google map
+            <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 200px">
+            <iframe src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+            </div>
+          button.btn.btn-success.w-100(type='submit', value='ارسال') &#x627;&#x631;&#x633;&#x627;&#x644;
+    // Footer
+    .container-fluid
+      .row
+        .col-md-12.text-center.pt-2
+          p
+            | &copy; 2023 copyright 
+            a.text-white(href='')
+          a.text-white(href='')
+        a.text-white(href='')
+      a.text-white(href='')
